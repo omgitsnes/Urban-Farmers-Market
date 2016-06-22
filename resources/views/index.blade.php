@@ -41,7 +41,7 @@
                 <a href="#top"  onclick = $("#menu-close").click(); >Urban Farmer's Market</a>
             </li>
             <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+                <a href="{{ route('Home')}}" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
