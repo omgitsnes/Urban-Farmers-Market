@@ -44,7 +44,7 @@
                 <a href="{{ route('Home')}}" onclick = $("#menu-close").click(); >@if (Auth::check()) {{ Auth::user()->name }} @else Home @endif</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Advertisements</a>
+                <a href="#advertisements" onclick = $("#menu-close").click(); >Advertisements</a>
             </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Users</a>
@@ -69,7 +69,7 @@
             </div>
             <br>
             <a href="#about"><button class="btn btn-default btn-success">Find Out More</button></a>
-            <a href="#about"><button class="btn btn-default btn-info">Advertisements</button></a>
+            <a href="#advertisements"><button class="btn btn-default btn-info">Advertisements</button></a>
             <a href="#about"><button class="btn btn-default btn-danger">Users</button></a>
         </div>
     </header>
