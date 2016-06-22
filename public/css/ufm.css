@@ -169,7 +169,7 @@ hr.small {
 }
 
 .header button {
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .header h1 {
@@ -180,7 +180,18 @@ hr.small {
 .header h3 {
     font-size: 120%;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 0px;
+}
+
+.header input {
+    text-align: center;
+    opacity: 0.5;
+}
+
+.header .input-group {
+    display: inline-flex;
+    padding: 0px;
+    padding-bottom: 10px;
 }
 
 /* About */
@@ -240,24 +251,6 @@ hr.small {
 .call-to-action .btn {
     margin: 10px;
 }
-
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-#top {
-
-}
-
-
 
 /* Footer */
 
