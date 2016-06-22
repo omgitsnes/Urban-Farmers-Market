@@ -218,6 +218,9 @@ hr.small {
     background-color: #D9534F;
 }
 
+.advertisement, .thumbnail {
+    height: 350px;
+}
 /* Users */
 
 .users {

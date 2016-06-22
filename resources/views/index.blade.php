@@ -22,87 +22,18 @@
                 <div class="col-lg-12 text-center">
                     <h2>Most recent advertisements</h2>
                     <hr class="small">
-
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    @foreach ($advertisements as $advertisement)
+                        <div class="col-xs-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="img/portfolio-1.jpg" alt="...">
+                                <div class="caption">
+                                    <h3>{{ $advertisement->name }}</h3>
+                                    <p>{{ $advertisement->description }}</p>
+                                    <p><a href="#" class="btn btn-primary" role="button"> $ </a> <a href="#" class="btn btn-default" role="button"> + </a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="thumbnail">
-                            <img src="img/portfolio-1.jpg" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'LandingPageController@index')->name('LandingPage');
 
 Route::auth();
 
