@@ -13,7 +13,7 @@ class LandingPageController extends Controller
      */
     public function __construct()
     {
-
+        //
     }
 
     /**
@@ -23,7 +23,12 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $advertisements = Advertisement::where('blocked', 0)->where('available_until', '>', date("Y-m-d H:i:s"), 'or', NULL)->take(8)->get();
+        $advertisements = Advertisement::orderBy('available_on', 'desc')
+        ->where('blocked', 0)
+        ->where('available_until', '>', date("Y-m-d H:i:s"), 'or', NULL)
+        ->take(8)
+        ->get();
+
         return view('index', compact('advertisements'));
     }
 }

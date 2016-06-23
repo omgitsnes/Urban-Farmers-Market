@@ -70,7 +70,7 @@
             <br>
             <a href="#about"><button class="btn btn-default btn-success">Find Out More</button></a>
             <a href="#advertisements"><button class="btn btn-default btn-info">Advertisements</button></a>
-            <a href="#about"><button class="btn btn-default btn-danger">Users</button></a>
+            <a href="#tops"><button class="btn btn-default btn-danger">Users</button></a>
         </div>
     </header>
 
@@ -81,9 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Urban Farmers Market</strong>
-                    </h4>
-                    <p>This is where we are</p>
+                    <h4><strong>Urban Farmers Market</strong></h4>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i>Contact us</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:contact@ufm.com">contact@ufm.com</a>

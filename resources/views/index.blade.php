@@ -40,7 +40,7 @@
     </section>
 
     <!-- Top users -->
-    <section id="users" class="users">
+    <section id="tops" class="tops">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 text-center">
