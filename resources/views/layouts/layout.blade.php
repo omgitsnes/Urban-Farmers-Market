@@ -41,7 +41,10 @@
                 <a href="#top"  onclick = $("#menu-close").click(); >Urban Farmer's Market</a>
             </li>
             <li>
-                <a href="{{ route('Home')}}" onclick = $("#menu-close").click(); >@if (Auth::check()) {{ Auth::user()->name }} @else Home @endif</a>
+                @if (Auth::check())
+                <img src="{{ Auth::user()->profile_photo }}" class="img-thumbnail"/>
+                @endif
+                <a href="{{ route('Home')}}" onclick = $("#menu-close").click(); >@if (Auth::check()) {{ Auth::user()->name }} @else Login / Sign Up @endif</a>
             </li>
             <li>
                 <a href="#advertisements" onclick = $("#menu-close").click(); >Advertisements</a>
