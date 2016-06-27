@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'LandingPageController@index')->name('LandingPage');
-
 Route::auth();
+
+Route::get('/', 'LandingPageController@index')->name('LandingPage');
 
 Route::get('/home', 'HomeController@index')->name('Home');
