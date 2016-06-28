@@ -12,10 +12,22 @@
 */
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
+
+    $faker->addProvider(new Faker\Provider\en_US\Person($faker));
+    $faker->addProvider(new Faker\Provider\en_US\Address($faker));
+    $faker->addProvider(new Faker\Provider\en_US\PhoneNumber($faker));
+    $faker->addProvider(new Faker\Provider\en_US\Company($faker));
+    $faker->addProvider(new Faker\Provider\Lorem($faker));
+    $faker->addProvider(new Faker\Provider\Internet($faker));
+
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+        'location' => $faker->city,
+        'presentation' => $faker->paragraph(3, true),
+
+
     ];
 });
