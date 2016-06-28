@@ -29,6 +29,8 @@ class LandingPageController extends Controller
         ->take(8)
         ->get();
 
+        
+
         return view('index', compact('advertisements'));
     }
 }

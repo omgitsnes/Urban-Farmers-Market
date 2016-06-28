@@ -25,9 +25,10 @@
                     @foreach ($advertisements as $advertisement)
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
-                                <img src="img/portfolio-1.jpg" alt="...">
+                                <a href="#"><img class="img-portfolio" src="img/portfolio-1.jpg" alt="..."></a>
                                 <div class="caption">
-                                    <h3>{{ $advertisement->name }}</h3>
+                                    <h3>{{ $advertisement->name }}</h3> (<a href="#">{{ $advertisement->user->name }}</a>)
+
                                     <p>{{ $advertisement->description }}</p>
                                     <p><a href="#" class="btn btn-primary" role="button"> $ </a> <a href="#" class="btn btn-default" role="button"> + </a></p>
                                 </div>
