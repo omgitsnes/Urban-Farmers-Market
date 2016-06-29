@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advertisement;
+use App\User;
 
 class LandingPageController extends Controller
 {
@@ -29,8 +30,16 @@ class LandingPageController extends Controller
         ->take(8)
         ->get();
 
-        
+        $topSellers = User::orderBy('sells_count', 'desc')
+            ->where('blocked', 0)
+            ->take(10)
+            ->get();
 
-        return view('index', compact('advertisements'));
+        $topBuyers = User::orderBy('buys_count', 'desc')
+            ->where('blocked', 0)
+            ->take(10)
+            ->get();;
+
+        return view('index', compact('advertisements', 'topSellers', 'topBuyers'));
     }
 }

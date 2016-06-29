@@ -19,6 +19,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     $faker->addProvider(new Faker\Provider\en_US\Company($faker));
     $faker->addProvider(new Faker\Provider\Lorem($faker));
     $faker->addProvider(new Faker\Provider\Internet($faker));
+    $faker->addProvider(new Faker\Provider\Image($faker));
 
     return [
         'name' => $faker->name,
@@ -27,12 +28,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
         'location' => $faker->city,
         'presentation' => $faker->paragraph(3, true),
-        'blocked' => rand(0, 1),
+        'blocked' => rand(0, 9) == 0 ? 1 : 0,
         'sells_evals' => rand(1, 5),
         'sells_count' => rand(0, 1000),
         'buys_evals' => rand(1, 5),
         'buys_count' => rand(0, 1000),
-        'profile_photo' => imageUrl($width = 640, $height = 480)
+        'profile_photo' => $faker->imageUrl(640, 480),
     ];
 });
 

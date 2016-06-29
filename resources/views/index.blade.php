@@ -48,26 +48,18 @@
                     <h2>Top Buyers</h2>
                     <hr clss="small">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            Cras justo odio
-                        </a>
-                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                        <a href="#" class="list-group-item">Morbi leo risus</a>
-                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        @foreach($topBuyers as $user)
+                            <a href="#" class="list-group-item"><span class="badge">{{ $user->buys_count }}</span>                                {{ $user->name }}</a>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-4 text-center">
                     <h2>Top Sellers</h2>
                     <hr clss="small">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            Cras justo odio
-                        </a>
-                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                        <a href="#" class="list-group-item">Morbi leo risus</a>
-                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        @foreach($topSellers as $user)
+                            <a href="#" class="list-group-item"><span class="badge">{{ $user->sells_count }}</span>                                {{ $user->name }}</a>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-4 text-center">
